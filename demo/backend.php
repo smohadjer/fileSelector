@@ -18,7 +18,7 @@
               $file_type=$_FILES['myfiles']['type'][$key];  
 
               $detectedType = exif_imagetype($file_tmp);
-              $path = 'upload/' . $file_name;
+              $path = 'uploads/' . $file_name;
               
               if ($detectedType) {
                 // save image to disk

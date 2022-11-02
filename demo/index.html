@@ -4,11 +4,12 @@
         <meta charset="utf-8" />
         <title>fileSelector demo</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="../src/fileSelector.css" />
         <link rel="stylesheet" type="text/css" href="./demo.css" />
     </head>
     <body>
         <h1>Add and remove files to a form via drag and drop</h1>
-        <form method="post" enctype="multipart/form-data" action="demo-backend.php">
+        <form method="post" enctype="multipart/form-data" action="backend.php">
             <fieldset>
                 <div class="row">
                     <div class="col1"><label for="name">My name:</label></div>
@@ -28,7 +29,7 @@
         </form>
 
         <script type="module">
-            import FileSelector from './src/fileSelector.js';
+            import FileSelector from '../src/fileSelector.js';
             const fileSelector = new FileSelector({
                 form: document.querySelector('form')
             });

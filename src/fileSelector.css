@@ -1,34 +1,3 @@
-.error {
-    color: red;
-}
-
-fieldset {
-    background: #eee;
-    padding: 20px;
-    border: 0;
-}
-
-.row {
-    display: flex;
-    margin: 10px 0;
-}
-
-.col1 {
-    margin-right: 20px;
-    min-width: 100px;
-}
-
-.col2 {
-    min-width: 300px;
-}
-
-.col2 input:not([hidden]) {
-    display: block;
-    box-sizing: border-box;
-    width: 100%;
-    border: solid 1px #999;
-}
-
 .myComponent .drop_zone {
   padding: 50px 10px;
   text-align: center;
