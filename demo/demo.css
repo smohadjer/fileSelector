@@ -8,16 +8,23 @@ fieldset {
     border: 0;
 }
 
-.row {
+.row + .row {
+  margin-top: 1em;
+}
+
+@media (min-width: 768px) {
+  .row {
     display: flex;
     margin: 10px 0;
-}
+  }
 
-.col1 {
+  .col1 {
     margin-right: 20px;
     min-width: 100px;
+  }
+
+  .col2 {
+      min-width: 300px;
+  }
 }
 
-.col2 {
-    min-width: 300px;
-}

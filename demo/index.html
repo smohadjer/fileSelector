@@ -8,16 +8,25 @@
         <link rel="stylesheet" type="text/css" href="./demo.css" />
     </head>
     <body>
-        <h1>Add and remove files to a form via drag and drop</h1>
+        <h1>FileSelector Demo</h1>
+        <p>FileSelector is a script that porgressively enhances input fields of type="file" in forms by replacing these input fields with a drag-and-drop area that displays file meta data such as name and file size and also allows removing of files before submitting the form.</p>
         <form method="post" enctype="multipart/form-data" action="backend.php">
             <fieldset>
                 <div class="row">
                     <div class="col1"><label for="name">My name:</label></div>
-                    <div class="col2"><input id="name" name="name" required /></div>
+                    <div class="col2"><input id="name" name="name" /></div>
                 </div>
                 <div class="row">
                     <div class="col1"><label>My files:</label></div>
                     <div class="col2"><input type="file" name="myfiles[]" multiple /></div>
+                </div>
+                <div class="row">
+                    <div class="col1"><label for="age">My age:</label></div>
+                    <div class="col2"><input id="age" name="age" /></div>
+                </div>
+                <div class="row">
+                    <div class="col1"><label>Other files:</label></div>
+                    <div class="col2"><input type="file" name="otherfiles[]" multiple /></div>
                 </div>
                 <div class="row">
                     <div class="col1"></div>

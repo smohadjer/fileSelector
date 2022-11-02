@@ -30,7 +30,7 @@ export default class FileSelector {
 
       this.inputs.forEach((input) => {
         const myComponent = 
-            `<div class="myComponent">
+            `<div class="fileSelector">
                 <div class="drop_zone">
                     <span class="prompt">Drag files or <a href="">Browse</a></span>
                 </div> 

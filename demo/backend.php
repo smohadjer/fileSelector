@@ -8,26 +8,32 @@
     </head>
     <body>
         <?php
-          echo $_POST['name'];
-          var_dump($_FILES);
-          
-          foreach($_FILES['myfiles']['tmp_name'] as $key => $tmp_name) {
-              $file_name = $_FILES['myfiles']['name'][$key];
-              $file_size =$_FILES['myfiles']['size'][$key];
-              $file_tmp =$_FILES['myfiles']['tmp_name'][$key];
-              $file_type=$_FILES['myfiles']['type'][$key];  
+          //echo $_POST['name'];
+          //var_dump($_FILES);
 
-              $detectedType = exif_imagetype($file_tmp);
-              $path = 'uploads/' . $file_name;
-              
-              if ($detectedType) {
-                // save image to disk
-                move_uploaded_file($file_tmp, $path);
-                // show image
-                echo '<p><img src="' . $path . '" /></p>';
-              }
+          foreach($_FILES as $files){
+            upload($files);
           }
-
+          
+          function upload($files) {
+            foreach($files['tmp_name'] as $key => $tmp_name) {
+              if (strlen($tmp_name) > 0) {
+                $file_name = $files['name'][$key];
+                $file_size = $files['size'][$key];
+                $file_tmp = $files['tmp_name'][$key];
+                $file_type= $files['type'][$key];  
+  
+                $detectedType = exif_imagetype($file_tmp);
+                $path = 'uploads/' . $file_name;
+                
+                if ($detectedType) {
+                  // save image to disk
+                  move_uploaded_file($file_tmp, $path);
+                  echo '<p><img src="' . $path . '" /></p>';
+                }
+              }
+            }
+          }
         ?>
     </body>
 </html>
