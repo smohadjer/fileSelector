@@ -95,8 +95,8 @@ export default class FileSelector {
     });
 
     fileManagerElement.addEventListener('click', (event) => {
-        if (event.target.nodeName === 'BUTTON') {
-          fileManager.remove(event.target.closest('li'));          
+        if (event.target.classList.contains('delete')) {
+          fileManager.remove(event.target.closest('li'));
         }
     });
   }

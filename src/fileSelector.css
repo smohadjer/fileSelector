@@ -19,6 +19,11 @@
     margin: 10px 0;
 }
 
+.myComponent .file-manager .delete {
+  width: 15px;
+  cursor: pointer;
+}
+
 .myComponent .file-manager li {
   border-bottom: solid 1px #ccc;
   margin-bottom: 5px;

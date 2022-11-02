@@ -21,10 +21,3 @@ fieldset {
 .col2 {
     min-width: 300px;
 }
-
-.col2 input:not([hidden]) {
-    display: block;
-    box-sizing: border-box;
-    width: 100%;
-    border: solid 1px #999;
-}

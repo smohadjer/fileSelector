@@ -64,7 +64,7 @@ export default class FileManager {
         for (var i = 0; i < this.data.length; i++) {
           const file = this.data[i];
           const entry = document.createElement('li');
-          const fileData = `<div><span class="name">${file.name}</span> (<span class="size">${this.bytesToSize(file.size)}</span>)</div><button>Delete</button>`;
+          const fileData = `<div><span class="name">${file.name}</span> (<span class="size">${this.bytesToSize(file.size)}</span>)</div><img class="delete" src="trash.svg" alt="Delete" />`;
           entry.innerHTML = fileData;
           this.element.appendChild(entry);
         }  
